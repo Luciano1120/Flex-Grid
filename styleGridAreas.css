@@ -1,0 +1,46 @@
+.grid-container {
+
+    display: grid;
+    
+    /* armo las Q de filas y columnas en base a la grid q le paso al template-areas */
+    grid-template-rows:  repeat( 4,50vh);  /* es muy util usar vh para columnas | ver q si veo la grilla desde el navegador con f12 me las distribuye para q 2 filas se vean en la pantalla dado q le puse 50vh, si le pongo 100 me ocupa todo el alto*/
+    grid-template-columns: repeat(3,1fr); 
+
+
+    /* areas de grid, sirve para pasar despues la distribucion a las clases*/
+    /* como son 4 rows son 4 lienas q defino y como son 3 columnas son 3 palabras por linea */
+    /* es una alternativa a usar grid-column/Row-start/end como está en styleGrid */
+    grid-template-areas: 
+    'banner banner banner'
+    'productos productos publi'
+    'productos productos publi'
+    'testi testi testi'    
+    ;
+}
+
+
+
+.banner {
+    grid-area: banner;
+    border: 1px solid black;
+
+}
+
+.products {
+    grid-area: productos;
+    border: 1px solid black;
+
+}
+
+
+.publicidad {
+    grid-area: publi;
+    border: 1px solid black;
+
+}
+
+.testimonios {
+    grid-area: testi;
+    border: 1px solid black;
+
+}

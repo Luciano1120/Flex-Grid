@@ -1,0 +1,47 @@
+/* para setear los margenes en 0 */
+*{
+margin:  0;
+padding: 0;
+}
+
+/* ----------------------------------------------------------- */
+
+/* clase para el contenedor*/
+.grid-container {
+
+    display: grid; /* para declarar el grid- con esto al igual q flex el navegador lo interpreta q va a funcionar como grilla*/
+
+     /* grid-template-columns: 150px 150px 150px 150px; altura del cuadrado y cantidad de columnas en base a la cantidad de valores q se le pasaron */
+    /*grid-template-columns: repeat(4,150px); /*altura del cuadrado para hacerlo mas eficiente, y hasta le puedo agregar una medida diferencia fuera del repeat de esta forma grid-template-columns: repeat(4,150px)200px */
+    grid-template-columns: repeat(4,1fr); /*para q sea responsive el ancho. 1fr = fraccion- usar para las columnas*/
+    
+
+    grid-template-rows: 150px 150px 150px 150px; /*anchura del cuadrado de cada fila, en este caso definimos 4 filas por q definí 5 valore*/
+
+    /* gap=brecha=margin para separar filas y columnas */
+    gap: 10px; 
+
+    /* le aplico bordes al contenedor */
+    border: 1px solid blue;
+
+}
+
+/* clase para cada elemento dentro del container */
+.grid-item {
+    
+    /* le aplico bordes a cada elemento */
+    border: 1px solid black;
+
+}
+
+/* agrupar varias celdas de la grilla */
+/* agrupo para la derecha y para abajo */
+.first-item{
+grid-column-start:  1;
+grid-column-end: 3;
+/* grid-column: 1/3; de forma abreviada */
+
+grid-row-start: 1;
+grid-row-end: 3;
+/* grid-row: 1/3; de forma abreviada */
+}

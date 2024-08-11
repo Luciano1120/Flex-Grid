@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleFlexBox.css">
+    <title>FlexBox</title>
+</head>
+<body>
+    <!-- 
+        2 tipos de elementos naturales | div, span 
+        - div es un elemento en bloque -> Ocupa todo el ancho de la pantalla sin importar el ancho de su contenido
+        se puede verificar esto cuando inspeccionas el elemento, q sombra todo el ancho.
+        -span es un elemento en linea -> Solo ocupa el ancho de su contenido . Ejemplos cuando se sube un enlace de youtube, mapas y videos q por su naturaleza ocupan ese espacio
+
+        Con la semantica de HTML5 lo que hacemos es utilizar lo mas que podamos las etiquetas semanticas y cuando nos quedamos sin opciones, empezamos a usar div o span. 
+    -->
+    
+        <!-- Header -->
+        <header class="header-container"> <!-- Cuando en una class tengo mas de una palabra, las uno con un guión medio | Nomenclatura -->
+            <div class="header"> <!-- contenedor a nivel Items -->
+                <div class="date">16 de Julio</div>
+                <div class="signup">Sign up</div>
+                <div class="login">Login</div>
+            </div>
+        </header>
+        <!-- Fin Header -->
+    
+        <!-- Productos -->
+        <section class="productos-container">
+            <div class="productos">
+                <div class="suscribe">
+                    <p>Suscribete</p>
+                </div>
+                <div class="logo">
+                    <img src="multimedia/awesome-logo.svg" alt="">
+                </div>
+                <div class="social">
+                    <img src="multimedia/social-icons.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Fin Productos -->
+    
+        <!-- Fotos -->
+         <section class="photo-grid-container">
+            <div class="photo-grid">
+                <!-- En HTML se pueden usar entre las comillas mas de una class en el mismo elemento -->
+                 <!-- para hacer divs masivos div*Q y si quiero q contenga imagen dentro div*Q>img y ya arma el bloque -->
+                  <!-- en este caso combino 2 clases, para q mantenga la clase principal como las otras pero a su vez tenga algo aparte -->
+                <div class="photo-grid-item first-item">
+                    <img src="multimedia/one.svg">
+                </div>
+                <div class="photo-grid-item">
+                    <img src="multimedia/two.svg">
+                </div>
+                <div class="photo-grid-item">
+                    <img src="multimedia/three.svg" alt="">
+                </div>
+                <div class="photo-grid-item">
+                    <img src="multimedia/four.svg" alt="">
+                </div>
+                <div class="photo-grid-item">
+                    <img src="multimedia/five.svg" alt="">
+                </div>
+            </div>
+         </section>
+        <!-- Fin Fotos -->
+    
+
+    </body>
+    </html>

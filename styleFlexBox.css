@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox tiene dos elementos internos | Flex container y el Flex items 
+con header-container acomodo la caja principal, en este caso la pogo centrada y con header distribuyo los items dentro para ello están los div dentro del html contenidos en el 2do contenedor q los manipula*/
+.header-container {
+    color: #fff;
+    background-color: #5995DA;
+    padding: 20px 0;
+    border: 5px solid #18171a; /*serìa el borde del contenedor principal, por q ver debajo q en el header q a suvez contiene 3 div tiene otro borde*/
+
+    /* Necesitamos activar flexbox para que los navegadores (chrome, safari, duck duck go, opera, brave, etc) entiendan que esta estructura HTML es es flexible */
+    display: flex; /* Activamos flex y ahora podemos usar sus propiedades internas */
+
+    /* justify-content nos ayuda a alinear horizontalmente cualquier elemento | flex-start - center - flex-end */
+    justify-content: center; /*muevo el contenido del contenedor hacia el centro*/
+
+}
+
+.header {
+    border: 1px solid #fff;
+    width: 60%; /* Unidades de medida relativas que nos va a ayudar a que nuestros elementos sean responsive (que se acomoden a cualquier tipo de pantalla), es el % */
+    
+    display: flex;
+    justify-content: space-around; /* space around, permite q tenga margenes a los extremos, a diferencia de
+    space between q los tira para los extremos, ya q los espacios son entre los elementos, sin q tenga margen a los extremos*/
+
+    
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* hacemos otro Flexbox */
+.productos-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+   
+    display: flex;
+    justify-content: center;
+}
+
+.productos {
+    width: 80%;
+    height: 300px; /* tambien podrias utilizar la unidad de medida relativa VH - viewport height */
+    display: flex;
+    justify-content: space-between;
+
+    /* Alineación vertical de los items. es decir q me los centro verticalmente*/
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+
+/*  .------------------------------------------------------------------------------------ */
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    display: flex; /* Al flexibilizar la caja interna despues de la que es contenedora, se ponen los elementos en linea automaticamente */
+    justify-content: space-around;
+    /* width: 900px; */
+
+    
+    flex-wrap: wrap; /* Esta propiedad de Flexbox todo el tiempo, automaticamente, está lista para corregir los elementos que desbordan del body para q sea responsive */
+
+}
+
